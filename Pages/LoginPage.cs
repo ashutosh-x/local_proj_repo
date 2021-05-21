@@ -6,19 +6,20 @@ using SeleniumExtras.PageObjects;
 
 namespace local_proj_repo.Pages
 {
-    public class LoginPage : PageFactoryInit
+    public class LoginPage : BasePage
     {
-
         [FindsBy(How = How.Id, Using = "txtUsername")]
         public IWebElement txtUsername { get; set; }
         [FindsBy(How = How.Id, Using = "txtPassword")]
         public IWebElement txtPassword { get; set; }
+        [FindsBy(How = How.Id, Using = "btnLogin")]
+        public IWebElement btnLogin { get; set; }
         public void LoginToHRMGateway(string UserType)
         {
-            txtPassword.SendKeys("hello");
-            txtUsername.SendKeys("hello");
-            txtUsername.Clear();
-            txtPassword.Clear();
+            txtUsername.EnterText(UserType);
+            txtPassword.EnterText("admin123");
+            btnLogin.Click();
+            WebDriverExtensions.WaitForPageToLoad(Driver, 60);
         }
     }
 }

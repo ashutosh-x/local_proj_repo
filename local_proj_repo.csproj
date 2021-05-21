@@ -197,20 +197,49 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\BaseClass.cs" />
-    <Compile Include="Base\PageFactoryInit.cs" />
+    <Compile Include="Base\ExtentReport.cs" />
+    <Compile Include="Base\BasePage.cs" />
+    <Compile Include="Base\TestInitializeHook.cs" />
+    <Compile Include="Extensions\Assertions.cs" />
     <Compile Include="Extensions\WebDriverExtensions.cs" />
     <Compile Include="Extensions\WebElementExtensions.cs" />
+    <Compile Include="Features\Admin\UsersFeature.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UsersFeature.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Homepage.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Homepage.feature</DependentUpon>
+    </Compile>
     <Compile Include="Features\Login.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Login.feature</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Admin\UserManagement\UserRolesPage.cs" />
+    <Compile Include="Pages\Admin\UserManagement\UsersPage.cs" />
+    <Compile Include="Pages\CommonPage.cs" />
+    <Compile Include="Pages\HomePage.cs" />
     <Compile Include="Pages\LoginPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Steps\Admin\UserManagement\UsersRolesSteps.cs" />
+    <Compile Include="Steps\Admin\UserManagement\UsersSteps.cs" />
+    <Compile Include="Steps\CommonSteps.cs" />
+    <Compile Include="Steps\HomePageSteps.cs" />
     <Compile Include="Steps\LoginSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Features\Admin\UsersFeature.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>UsersFeature.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Features\Homepage.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>Homepage.feature.cs</LastGenOutput>
+    </None>
     <None Include="Features\Login.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Login.feature.cs</LastGenOutput>

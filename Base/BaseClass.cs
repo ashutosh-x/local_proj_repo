@@ -36,16 +36,6 @@ namespace local_proj_repo.Base
                 Driver = new EdgeDriver();
                 Driver.Manage().Cookies.DeleteAllCookies();
             }
-        }
-        public static void NavigateToSite()
-        {
-            SetupApplication();
-            Driver.Navigate().GoToUrl(ConfigurationManager.AppSettings["TestPortal"]);
-        }
-        [AfterScenario]
-        public static void CloseBrowser()
-        {
-            Driver.Quit();
-        }
+        }    
     }
 }
