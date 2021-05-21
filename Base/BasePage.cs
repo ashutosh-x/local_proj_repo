@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace local_proj_repo.Base
 {
-    public class PageFactoryInit : BaseClass
+    public class BasePage : BaseClass
     {
-        public PageFactoryInit()
+        public BasePage()
         {
             SeleniumExtras.PageObjects.PageFactory.InitElements(Driver, this);
         }

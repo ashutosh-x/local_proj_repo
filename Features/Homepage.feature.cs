@@ -18,20 +18,20 @@ namespace local_proj_repo.Features
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [NUnit.Framework.TestFixtureAttribute()]
-    [NUnit.Framework.DescriptionAttribute("01Login Feature")]
-    public partial class _01LoginFeatureFeature
+    [NUnit.Framework.DescriptionAttribute("02Homepage Feature")]
+    public partial class _02HomepageFeatureFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Login.feature"
+#line 1 "Homepage.feature"
 #line hidden
         
         [NUnit.Framework.OneTimeSetUpAttribute()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "01Login Feature", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "02Homepage Feature", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -78,18 +78,18 @@ namespace local_proj_repo.Features
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("01Validate the login functionality")]
-        [NUnit.Framework.CategoryAttribute("mytag")]
+        [NUnit.Framework.DescriptionAttribute("01Validate the UI for the homepage of OrangeHRM portal")]
+        [NUnit.Framework.CategoryAttribute("Regression")]
         [NUnit.Framework.TestCaseAttribute("admin", null)]
-        public virtual void _01ValidateTheLoginFunctionality(string userType, string[] exampleTags)
+        public virtual void _01ValidateTheUIForTheHomepageOfOrangeHRMPortal(string userType, string[] exampleTags)
         {
             string[] @__tags = new string[] {
-                    "mytag"};
+                    "Regression"};
             if ((exampleTags != null))
             {
                 @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
             }
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01Validate the login functionality", null, @__tags);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01Validate the UI for the homepage of OrangeHRM portal", null, @__tags);
 #line 7
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -100,6 +100,8 @@ this.FeatureBackground();
 #line 9
  testRunner.And("I should be redirected to the homepage of the OrangeHRM portal", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
+ testRunner.And("I validate the main menu options displayed on the left side of the homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
  testRunner.And("I click on Logout", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
